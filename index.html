@@ -36,7 +36,7 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
 .hero-title span{color:var(--gold)}
 .hero-sub{font-size:12px;color:var(--muted);margin-top:5px}
 .wk-box{text-align:left;direction:ltr}
-.wk-lbl{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;font-family:var(--fl);margin-bottom:2px}
+.wk-lbl{font-size:11px;color:var(--dim);letter-spacing:.02em;font-family:var(--fb);margin-bottom:2px}
 .wk-val{font-size:16px;font-weight:700;color:var(--muted);font-family:var(--fl)}
 
 .pulse{width:100%;height:2px;background:linear-gradient(90deg,transparent 0%,rgba(245,179,1,.5) 20%,var(--gold) 50%,rgba(245,179,1,.5) 80%,transparent 100%);background-size:200% 100%;animation:sw 3s ease-in-out infinite}
@@ -64,6 +64,11 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
 .chip.JPY.on{color:#fb923c;border-color:rgba(251,146,60,.4);background:rgba(251,146,60,.09)}
 .chip.CHF.on{color:#4ade80;border-color:rgba(74,222,128,.4);background:rgba(74,222,128,.09)}
 .chip.NZD.on{color:#34d399;border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.09)}
+.chip.XAU.on{color:#F5B301;border-color:rgba(245,179,1,.5);background:rgba(245,179,1,.09)}
+.chip.XAG.on{color:#c0c0c0;border-color:rgba(192,192,192,.4);background:rgba(192,192,192,.08)}
+.chip.XTI.on{color:#7dd3fc;border-color:rgba(125,211,252,.4);background:rgba(125,211,252,.08)}
+.chip.XBR.on{color:#94a3b8;border-color:rgba(148,163,184,.4);background:rgba(148,163,184,.08)}
+.chip.NG.on {color:#6ee7b7;border-color:rgba(110,231,183,.4);background:rgba(110,231,183,.08)}
 .tz-note{font-size:11px;color:var(--dim);display:flex;align-items:center;gap:5px;margin-right:auto}
 
 .sumstrip{max-width:1120px;margin:18px auto 0;padding:0 20px;display:flex;gap:10px;flex-wrap:wrap}
@@ -107,6 +112,11 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
 .cb.JPY{color:#fb923c;border-color:rgba(251,146,60,.3);background:rgba(251,146,60,.07)}
 .cb.CHF{color:#4ade80;border-color:rgba(74,222,128,.3);background:rgba(74,222,128,.07)}
 .cb.NZD{color:#34d399;border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.07)}
+.cb.XAU{color:#F5B301;border-color:rgba(245,179,1,.4);background:rgba(245,179,1,.07)}
+.cb.XAG{color:#c0c0c0;border-color:rgba(192,192,192,.35);background:rgba(192,192,192,.06)}
+.cb.XTI{color:#7dd3fc;border-color:rgba(125,211,252,.35);background:rgba(125,211,252,.06)}
+.cb.XBR{color:#94a3b8;border-color:rgba(148,163,184,.35);background:rgba(148,163,184,.06)}
+.cb.NG {color:#6ee7b7;border-color:rgba(110,231,183,.35);background:rgba(110,231,183,.06)}
 
 .tev{max-width:290px}
 .even{font-size:12.5px;font-weight:500;color:var(--cream);line-height:1.3}
@@ -192,8 +202,8 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
       <p class="hero-sub">رویدادهای اقتصادی مهم این هفته — داده‌های واقعی</p>
     </div>
     <div class="wk-box">
-      <div class="wk-lbl">CURRENT WEEK</div>
-      <div class="wk-val">31 Aug — 4 Sep 2026</div>
+      <div class="wk-lbl">هفته جاری</div>
+      <div class="wk-val" id="week-range-display">—</div>
     </div>
   </div>
 </section>
@@ -221,6 +231,12 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
         <span class="chip JPY on" data-c="JPY">JPY</span>
         <span class="chip CHF on" data-c="CHF">CHF</span>
         <span class="chip NZD on" data-c="NZD">NZD</span>
+        <span style="display:inline-block;width:1px;height:14px;background:var(--border);margin:0 3px;vertical-align:middle;flex-shrink:0"></span>
+        <span class="chip XAU on" data-c="XAU" title="طلا">XAU</span>
+        <span class="chip XAG on" data-c="XAG" title="نقره">XAG</span>
+        <span class="chip XTI on" data-c="XTI" title="نفت WTI">XTI</span>
+        <span class="chip XBR on" data-c="XBR" title="نفت برنت">XBR</span>
+        <span class="chip NG  on" data-c="NG"  title="گاز طبیعی">NG</span>
       </div>
     </div>
   </div>
@@ -260,7 +276,7 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
       این تقویم صرفاً برای اطلاع‌رسانی آموزشی است. مکتب فارکس سیگنال معاملاتی ارائه نمی‌دهد و مسئولیت
       تصمیم‌های معاملاتی شما را ندارد. پیش از هر معامله، تحلیل شخصی انجام دهید و اصل مدیریت ریسک
       (۱ تا ۲ درصد از سرمایه در هر معامله) را رعایت کنید.
-      داده‌های این هفته (۳۱ آگست تا ۴ سپتامبر ۲۰۲۶) از منابع عمومی جمع‌آوری شده‌اند. تمام ساعت‌ها به وقت کابل (UTC+4:30) نمایش داده می‌شوند.
+      داده‌های این هفته از منابع عمومی جمع‌آوری شده‌اند. تمام ساعت‌ها به وقت کابل (UTC+4:30) نمایش داده می‌شوند.
     </p>
   </div>
 </div>
@@ -455,11 +471,23 @@ const EVS = [
 const WD = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
 const MFA = ['جنوری','فبروری','مارس','اپریل','می','جون','جولای','آگست','سپتامبر','اکتوبر','نوامبر','دسمبر'];
 
-let activeCCY = new Set(['USD','EUR','GBP','AUD','CAD','JPY','CHF','NZD']);
+let activeCCY = new Set(['USD','EUR','GBP','AUD','CAD','JPY','CHF','NZD','XAU','XAG','XTI','XBR','NG']);
 
 function render() {
   const now = new Date();
   const filtered = EVS.filter(e => activeCCY.has(e.c));
+
+  // ── Dynamic week range label ──────────────────────────────
+  const allDates = [...new Set(EVS.map(e => e.d))].sort();
+  if (allDates.length) {
+    const first = new Date(allDates[0] + 'T12:00:00');
+    const last  = new Date(allDates[allDates.length - 1] + 'T12:00:00');
+    const MLEN  = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const fStr  = `${first.getDate()} ${MLEN[first.getMonth()]}`;
+    const lStr  = `${last.getDate()} ${MLEN[last.getMonth()]} ${last.getFullYear()}`;
+    const el = document.getElementById('week-range-display');
+    if (el) el.textContent = `${fStr} — ${lStr}`;
+  }
 
   document.getElementById('st').textContent = filtered.length;
   document.getElementById('sh').textContent = filtered.filter(e=>e.i==='H').length;
@@ -602,6 +630,8 @@ const C = {
   USD:'#60a5fa', EUR:'#a78bfa', GBP:'#f87171',
   AUD:'#fbbf24', CAD:'#f472b6', JPY:'#fb923c',
   CHF:'#4ade80', NZD:'#34d399',
+  XAU:'#F5B301', XAG:'#c0c0c0', XTI:'#7dd3fc',
+  XBR:'#94a3b8', NG:'#6ee7b7',
 };
 
 // Convert ET (UTC-4) time string to Kabul (UTC+4:30)
@@ -748,7 +778,14 @@ function drawDayCanvas(day, evList, isStory) {
   ctx.textAlign = 'left';
   ctx.font = `${isStory?18:14}px 'Calibri',sans-serif`;
   ctx.fillStyle = C.dim;
-  ctx.fillText('31 Aug — 4 Sep 2026', EX * 2 + (isStory?14:10), EY);
+  // Compute week range dynamically from EVS
+  const MLEN_C  = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const allD    = [...new Set(EVS.map(e => e.d))].sort();
+  const firstDt = new Date(allD[0] + 'T12:00:00');
+  const lastDt  = new Date(allD[allD.length - 1] + 'T12:00:00');
+  const weekLabel = `${firstDt.getDate()} ${MLEN_C[firstDt.getMonth()]} — ${lastDt.getDate()} ${MLEN_C[lastDt.getMonth()]} ${lastDt.getFullYear()}`;
+
+  ctx.fillText(weekLabel, EX * 2 + (isStory?14:10), EY);
 
   // Gold separator
   const lg = ctx.createLinearGradient(0, 0, W, 0);
@@ -790,9 +827,10 @@ function drawDayCanvas(day, evList, isStory) {
   ctx.fillText('ساعت: وقت کابل (UTC+4:30)', W - PAD, legY);
 
   // ── DAY HEADER ─────────────────────────────────────────────
-  const dt  = new Date(day + 'T12:00:00');
-  const wd  = WD[dt.getDay()];
-  const ds  = `${dt.getDate()} ${MFA[dt.getMonth()]} ۲۰۲۶`;
+  const dt   = new Date(day + 'T12:00:00');
+  const wd   = WD[dt.getDay()];
+  const MONTHS_LAT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const ds   = `${dt.getDate()} ${MONTHS_LAT[dt.getMonth()]} 2026`;
 
   let y = HDR_H + TITLE_H + LEG_H + GAP_TOP + GAP_PRE;
   ctx.fillStyle = C.mid;
@@ -807,7 +845,7 @@ function drawDayCanvas(day, evList, isStory) {
   ctx.textAlign = 'left';
   ctx.font = `${FONT_SM}px 'Calibri',sans-serif`;
   ctx.fillStyle = C.muted;
-  ctx.fillText(ds.replace('۲۰۲۶','2026'), PAD + (isStory?18:14), y + DAY_H/2);
+  ctx.fillText(ds, PAD + (isStory?18:14), y + DAY_H/2);
 
   y += DAY_H + GAP_DAY;
 
