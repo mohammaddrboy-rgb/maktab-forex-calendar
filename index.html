@@ -64,6 +64,7 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
 .chip.JPY.on{color:#fb923c;border-color:rgba(251,146,60,.4);background:rgba(251,146,60,.09)}
 .chip.CHF.on{color:#4ade80;border-color:rgba(74,222,128,.4);background:rgba(74,222,128,.09)}
 .chip.NZD.on{color:#34d399;border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.09)}
+.chip.CNY.on{color:#f9a8d4;border-color:rgba(249,168,212,.4);background:rgba(249,168,212,.09)}
 .chip.XAU.on{color:#F5B301;border-color:rgba(245,179,1,.5);background:rgba(245,179,1,.09)}
 .chip.XAG.on{color:#c0c0c0;border-color:rgba(192,192,192,.4);background:rgba(192,192,192,.08)}
 .chip.XTI.on{color:#7dd3fc;border-color:rgba(125,211,252,.4);background:rgba(125,211,252,.08)}
@@ -112,6 +113,7 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
 .cb.JPY{color:#fb923c;border-color:rgba(251,146,60,.3);background:rgba(251,146,60,.07)}
 .cb.CHF{color:#4ade80;border-color:rgba(74,222,128,.3);background:rgba(74,222,128,.07)}
 .cb.NZD{color:#34d399;border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.07)}
+.cb.CNY{color:#f9a8d4;border-color:rgba(249,168,212,.3);background:rgba(249,168,212,.07)}
 .cb.XAU{color:#F5B301;border-color:rgba(245,179,1,.4);background:rgba(245,179,1,.07)}
 .cb.XAG{color:#c0c0c0;border-color:rgba(192,192,192,.35);background:rgba(192,192,192,.06)}
 .cb.XTI{color:#7dd3fc;border-color:rgba(125,211,252,.35);background:rgba(125,211,252,.06)}
@@ -231,6 +233,7 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
         <span class="chip JPY on" data-c="JPY">JPY</span>
         <span class="chip CHF on" data-c="CHF">CHF</span>
         <span class="chip NZD on" data-c="NZD">NZD</span>
+        <span class="chip CNY on" data-c="CNY">CNY</span>
         <span style="display:inline-block;width:1px;height:14px;background:var(--border);margin:0 3px;vertical-align:middle;flex-shrink:0"></span>
         <span class="chip XAU on" data-c="XAU" title="طلا">XAU</span>
         <span class="chip XAG on" data-c="XAG" title="نقره">XAG</span>
@@ -302,21 +305,25 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
 const EVS = [
 
   // ── دوشنبه ۷ سپتامبر ─────────────────────────────────────
-  // تعطیل عمومی در آمریکا و کانادا (Labor Day) — فعالیت بازار کمتر
+  { d:'2026-09-07', t:'—', c:'USD', i:'M',
+    en:'US & Canada Markets Closed — Labor Day Holiday',
+    fa:'تعطیل بازارهای آمریکا و کانادا — روز کارگر',
+    prev:'—', fore:'—', actual:null },
+
   { d:'2026-09-07', t:'23:50', c:'JPY', i:'H',
-    en:'Japan GDP Q2 2026 Final (Q/Q)',
-    fa:'تولید ناخالص داخلی جاپان سه‌ماهه دوم — نهایی (ماهانه)',
+    en:'Japan GDP Q2 Final (Q/Q) — shown Tue 08:20 Kabul',
+    fa:'تولید ناخالص داخلی جاپان سه‌ماهه دوم — نهایی (ماهانه) — ساعت ۰۸:۲۰ کابل سه‌شنبه',
     prev:'0.5%', fore:'0.3%', actual:null },
 
   { d:'2026-09-07', t:'23:50', c:'JPY', i:'H',
-    en:'Japan GDP Q2 2026 Final (Y/Y)',
-    fa:'تولید ناخالص داخلی جاپان سه‌ماهه دوم — نهایی (سالانه)',
+    en:'Japan GDP Q2 Final (Y/Y) — shown Tue 08:20 Kabul',
+    fa:'تولید ناخالص داخلی جاپان سه‌ماهه دوم — نهایی (سالانه) — ساعت ۰۸:۲۰ کابل سه‌شنبه',
     prev:'1.8%', fore:'1.1%', actual:null },
 
   // ── سه‌شنبه ۸ سپتامبر ────────────────────────────────────
-  { d:'2026-09-08', t:'—', c:'USD', i:'L',
-    en:'No Major Events Scheduled',
-    fa:'هیچ رویداد مهمی برنامه‌ریزی نشده است',
+  { d:'2026-09-08', t:'—', c:'USD', i:'M',
+    en:'No Major Economic Events Scheduled',
+    fa:'روز بدون رویداد اقتصادی مهم',
     prev:'—', fore:'—', actual:null },
 
   // ── چهارشنبه ۹ سپتامبر ───────────────────────────────────
@@ -333,7 +340,7 @@ const EVS = [
   // ── پنجشنبه ۱۰ سپتامبر ───────────────────────────────────
   { d:'2026-09-10', t:'06:00', c:'EUR', i:'H',
     en:'Germany CPI Final (Y/Y, Aug)',
-    fa:'شاخص هماهنگ قیمت مصرف‌کننده آلمان — نهایی (آگست)',
+    fa:'شاخص هماهنگ قیمت مصرف‌کننده آلمان — نهایی — سالانه (آگست)',
     prev:'2.8%', fore:'2.6%', actual:null },
 
   { d:'2026-09-10', t:'12:15', c:'EUR', i:'H',
@@ -392,7 +399,7 @@ const EVS = [
 const WD = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
 const MFA = ['جنوری','فبروری','مارس','اپریل','می','جون','جولای','آگست','سپتامبر','اکتوبر','نوامبر','دسمبر'];
 
-let activeCCY = new Set(['USD','EUR','GBP','AUD','CAD','JPY','CHF','NZD','XAU','XAG','XTI','XBR','NG']);
+let activeCCY = new Set(['USD','EUR','GBP','AUD','CAD','JPY','CHF','NZD','CNY','XAU','XAG','XTI','XBR','NG']);
 
 function render() {
   const now = new Date();
@@ -550,7 +557,7 @@ const C = {
   red:'#e05252', orange:'#e0943a', green:'#4caf76',
   USD:'#60a5fa', EUR:'#a78bfa', GBP:'#f87171',
   AUD:'#fbbf24', CAD:'#f472b6', JPY:'#fb923c',
-  CHF:'#4ade80', NZD:'#34d399',
+  CHF:'#4ade80', NZD:'#34d399', CNY:'#f9a8d4',
   XAU:'#F5B301', XAG:'#c0c0c0', XTI:'#7dd3fc',
   XBR:'#94a3b8', NG:'#6ee7b7',
 };
