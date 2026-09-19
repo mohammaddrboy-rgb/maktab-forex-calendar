@@ -304,125 +304,155 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
 // ══════════════════════════════════════════════════════════════════
 const EVS = [
 
-  // ── دوشنبه ۱۴ سپتامبر ───────────────────────────────────
-  { d:'2026-09-14', t:'01:30', c:'CNY', i:'M',
-    en:'China Retail Sales (Y/Y, Aug)',
-    fa:'فروش خرده‌فروشی چین — سالانه (آگست)',
-    prev:'3.2%', fore:'3.5%', actual:null },
-
-  { d:'2026-09-14', t:'01:30', c:'CNY', i:'M',
-    en:'China Industrial Production (Y/Y, Aug)',
-    fa:'تولیدات صنعتی چین — سالانه (آگست)',
-    prev:'5.3%', fore:'5.1%', actual:null },
-
-  { d:'2026-09-14', t:'08:30', c:'USD', i:'M',
-    en:'NY Empire State Manufacturing Index (Sep)',
-    fa:'شاخص تولید ایمپایر استیت نیویورک (سپتامبر)',
-    prev:'-2.0', fore:'1.5', actual:null },
-
-  // ── سه‌شنبه ۱۵ سپتامبر ───────────────────────────────────
-  { d:'2026-09-15', t:'01:30', c:'AUD', i:'M',
-    en:'Australia NAB Business Confidence (Aug)',
-    fa:'شاخص اعتماد تجاری NAB استرالیا (آگست)',
-    prev:'4', fore:'—', actual:null },
-
-  { d:'2026-09-15', t:'08:30', c:'USD', i:'M',
-    en:'Retail Sales (M/M, Aug)',
-    fa:'فروش خرده‌فروشی آمریکا — ماهانه (آگست)',
-    prev:'-0.2%', fore:'0.4%', actual:null },
-
-  { d:'2026-09-15', t:'08:30', c:'USD', i:'M',
-    en:'Retail Sales Ex-Autos (M/M, Aug)',
-    fa:'فروش خرده‌فروشی بدون خودرو — ماهانه (آگست)',
-    prev:'0.2%', fore:'0.3%', actual:null },
-
-  { d:'2026-09-15', t:'09:15', c:'USD', i:'M',
-    en:'Industrial Production (M/M, Aug)',
-    fa:'تولیدات صنعتی آمریکا — ماهانه (آگست)',
-    prev:'0.0%', fore:'0.2%', actual:null },
-
-  { d:'2026-09-15', t:'14:00', c:'USD', i:'H',
-    en:'FOMC Meeting Begins (Day 1 of 2)',
-    fa:'آغاز نشست کمیته بازار آزاد فدرال — FOMC (روز اول از دو روز)',
+  // ── دوشنبه ۲۱ سپتامبر ───────────────────────────────────
+  { d:'2026-09-21', t:'01:30', c:'AUD', i:'M',
+    en:'RBA Meeting Minutes (Sep)',
+    fa:'صورتجلسه نشست بانک مرکزی استرالیا — سپتامبر',
     prev:'—', fore:'—', actual:null },
 
-  // ── چهارشنبه ۱۶ سپتامبر ──────────────────────────────────
-  { d:'2026-09-16', t:'08:30', c:'USD', i:'H',
-    en:'Retail Sales Advance (M/M, Aug) ← Released same day as FOMC',
-    fa:'فروش خرده‌فروشی پیشرو — ماهانه (آگست) ← همزمان با FOMC',
-    prev:'-0.2%', fore:'0.4%', actual:null },
+  { d:'2026-09-21', t:'08:30', c:'USD', i:'M',
+    en:'Chicago Fed National Activity Index (Aug)',
+    fa:'شاخص فعالیت ملی شیکاگو فد (آگست)',
+    prev:'-0.08', fore:'0.05', actual:null },
 
-  { d:'2026-09-16', t:'14:00', c:'USD', i:'H',
-    en:'FOMC Interest Rate Decision ← Key event of the week',
-    fa:'تصمیم نرخ بهره فدرال رزرو (FOMC) ← مهم‌ترین رویداد هفته',
-    prev:'3.75%', fore:'3.75%', actual:null },
+  { d:'2026-09-21', t:'10:00', c:'USD', i:'M',
+    en:'Existing Home Sales (Aug)',
+    fa:'فروش خانه‌های دست دوم آمریکا (آگست)',
+    prev:'3.86M', fore:'3.90M', actual:null },
 
-  { d:'2026-09-16', t:'14:00', c:'USD', i:'H',
-    en:'FOMC Economic Projections (Dot Plot)',
-    fa:'پیش‌بینی‌های اقتصادی FOMC — نمودار نقطه‌ای (Dot Plot)',
+  // ── سه‌شنبه ۲۲ سپتامبر ───────────────────────────────────
+  { d:'2026-09-22', t:'03:15', c:'EUR', i:'H',
+    en:'France Flash Manufacturing PMI (Sep)',
+    fa:'شاخص مدیران خرید تولید فرانسه — اولیه (سپتامبر)',
+    prev:'44.9', fore:'45.5', actual:null },
+
+  { d:'2026-09-22', t:'03:15', c:'EUR', i:'H',
+    en:'France Flash Services PMI (Sep)',
+    fa:'شاخص مدیران خرید خدمات فرانسه — اولیه (سپتامبر)',
+    prev:'48.3', fore:'49.0', actual:null },
+
+  { d:'2026-09-22', t:'03:30', c:'EUR', i:'H',
+    en:'Germany Flash Manufacturing PMI (Sep)',
+    fa:'شاخص مدیران خرید تولید آلمان — اولیه (سپتامبر)',
+    prev:'44.1', fore:'44.8', actual:null },
+
+  { d:'2026-09-22', t:'03:30', c:'EUR', i:'H',
+    en:'Germany Flash Services PMI (Sep)',
+    fa:'شاخص مدیران خرید خدمات آلمان — اولیه (سپتامبر)',
+    prev:'51.2', fore:'51.5', actual:null },
+
+  { d:'2026-09-22', t:'04:00', c:'EUR', i:'H',
+    en:'Eurozone Flash Manufacturing PMI (Sep)',
+    fa:'شاخص مدیران خرید تولید منطقه یورو — اولیه (سپتامبر)',
+    prev:'45.8', fore:'46.3', actual:null },
+
+  { d:'2026-09-22', t:'04:00', c:'EUR', i:'H',
+    en:'Eurozone Flash Services PMI (Sep)',
+    fa:'شاخص مدیران خرید خدمات منطقه یورو — اولیه (سپتامبر)',
+    prev:'52.0', fore:'52.2', actual:null },
+
+  { d:'2026-09-22', t:'04:30', c:'GBP', i:'H',
+    en:'UK Flash Manufacturing PMI (Sep)',
+    fa:'شاخص مدیران خرید تولید بریتانیا — اولیه (سپتامبر)',
+    prev:'51.5', fore:'51.8', actual:null },
+
+  { d:'2026-09-22', t:'04:30', c:'GBP', i:'H',
+    en:'UK Flash Services PMI (Sep)',
+    fa:'شاخص مدیران خرید خدمات بریتانیا — اولیه (سپتامبر)',
+    prev:'55.0', fore:'54.8', actual:null },
+
+  { d:'2026-09-22', t:'09:45', c:'USD', i:'H',
+    en:'US Flash Manufacturing PMI (Sep)',
+    fa:'شاخص مدیران خرید تولید آمریکا — اولیه (سپتامبر)',
+    prev:'47.9', fore:'48.5', actual:null },
+
+  { d:'2026-09-22', t:'09:45', c:'USD', i:'H',
+    en:'US Flash Services PMI (Sep)',
+    fa:'شاخص مدیران خرید خدمات آمریکا — اولیه (سپتامبر)',
+    prev:'53.7', fore:'54.0', actual:null },
+
+  { d:'2026-09-22', t:'10:00', c:'USD', i:'M',
+    en:'Richmond Fed Manufacturing Index (Sep)',
+    fa:'شاخص تولید فد ریچموند (سپتامبر)',
+    prev:'4', fore:'5', actual:null },
+
+  // ── چهارشنبه ۲۳ سپتامبر ──────────────────────────────────
+  { d:'2026-09-23', t:'03:30', c:'CHF', i:'H',
+    en:'SNB Interest Rate Decision',
+    fa:'تصمیم نرخ بهره بانک ملی سوئیس (SNB)',
+    prev:'0.00%', fore:'0.00%', actual:null },
+
+  { d:'2026-09-23', t:'03:30', c:'CHF', i:'H',
+    en:'SNB Monetary Policy Assessment & Press Conference',
+    fa:'ارزیابی سیاست پولی SNB و کنفرانس مطبوعاتی',
     prev:'—', fore:'—', actual:null },
 
-  { d:'2026-09-16', t:'14:30', c:'USD', i:'H',
-    en:'Fed Chair Warsh Press Conference',
-    fa:'کنفرانس مطبوعاتی رئیس فدرال رزرو — وارش',
-    prev:'—', fore:'—', actual:null },
+  { d:'2026-09-23', t:'08:30', c:'USD', i:'M',
+    en:'Current Account Balance (Q2)',
+    fa:'تراز حساب جاری آمریکا — سه‌ماهه دوم',
+    prev:'-$241.7B', fore:'-$245.0B', actual:null },
 
-  { d:'2026-09-16', t:'10:30', c:'USD', i:'M',
+  { d:'2026-09-23', t:'10:00', c:'USD', i:'M',
+    en:'New Home Sales (Aug)',
+    fa:'فروش خانه‌های نو آمریکا (آگست)',
+    prev:'607K', fore:'620K', actual:null },
+
+  { d:'2026-09-23', t:'10:30', c:'USD', i:'M',
     en:'EIA Crude Oil Inventories (weekly)',
     fa:'ذخایر نفت خام EIA — هفتگی',
     prev:'—', fore:'—', actual:null },
 
-  // ── پنجشنبه ۱۷ سپتامبر ───────────────────────────────────
-  { d:'2026-09-17', t:'07:00', c:'GBP', i:'H',
-    en:'Bank of England Interest Rate Decision',
-    fa:'تصمیم نرخ بهره بانک انگلستان (BoE)',
-    prev:'3.75%', fore:'3.75%', actual:null },
-
-  { d:'2026-09-17', t:'07:00', c:'GBP', i:'H',
-    en:'BoE MPC Vote Split & Monetary Policy Summary',
-    fa:'رای‌گیری کمیته سیاست پولی BoE و بیانیه سیاست پولی',
-    prev:'—', fore:'—', actual:null },
-
-  { d:'2026-09-17', t:'07:30', c:'GBP', i:'H',
-    en:'BoE Governor Bailey Press Conference',
-    fa:'کنفرانس مطبوعاتی گاورنر بیلی — بانک انگلستان',
-    prev:'—', fore:'—', actual:null },
-
-  { d:'2026-09-17', t:'08:30', c:'USD', i:'H',
+  // ── پنجشنبه ۲۴ سپتامبر ───────────────────────────────────
+  { d:'2026-09-24', t:'08:30', c:'USD', i:'H',
     en:'Initial Jobless Claims (weekly)',
     fa:'درخواست‌های اولیه بیکاری — هفتگی',
     prev:'—', fore:'—', actual:null },
 
-  { d:'2026-09-17', t:'08:30', c:'USD', i:'M',
-    en:'Philadelphia Fed Manufacturing Index (Sep)',
-    fa:'شاخص تولید فد فیلادلفیا (سپتامبر)',
+  { d:'2026-09-24', t:'08:30', c:'USD', i:'M',
+    en:'Durable Goods Orders (M/M, Aug)',
+    fa:'سفارش‌های کالاهای بادوام — ماهانه (آگست)',
+    prev:'-1.5%', fore:'1.2%', actual:null },
+
+  { d:'2026-09-24', t:'08:30', c:'USD', i:'M',
+    en:'Durable Goods Ex-Transportation (M/M, Aug)',
+    fa:'سفارش‌های بادوام بدون حمل‌ونقل — ماهانه (آگست)',
+    prev:'—', fore:'0.2%', actual:null },
+
+  { d:'2026-09-24', t:'10:00', c:'USD', i:'M',
+    en:'Pending Home Sales (M/M, Aug)',
+    fa:'فروش خانه‌های در انتظار — ماهانه (آگست)',
     prev:'—', fore:'—', actual:null },
 
-  { d:'2026-09-17', t:'10:00', c:'USD', i:'M',
-    en:'Existing Home Sales (Aug)',
-    fa:'فروش خانه‌های دست دوم (آگست)',
-    prev:'—', fore:'—', actual:null },
+  // ── جمعه ۲۵ سپتامبر ──────────────────────────────────────
+  { d:'2026-09-25', t:'08:30', c:'CAD', i:'H',
+    en:'Canada GDP Monthly (M/M, Jul)',
+    fa:'تولید ناخالص داخلی ماهانه کانادا (جولای)',
+    prev:'0.1%', fore:'0.1%', actual:null },
 
-  // ── جمعه ۱۸ سپتامبر ──────────────────────────────────────
-  { d:'2026-09-18', t:'—', c:'JPY', i:'H',
-    en:'Bank of Japan Interest Rate Decision & Statement on Monetary Policy',
-    fa:'تصمیم نرخ بهره بانک جاپان (BoJ) و بیانیه سیاست پولی',
-    prev:'<0.25%', fore:'<0.25%', actual:null },
+  { d:'2026-09-25', t:'08:30', c:'USD', i:'H',
+    en:'Core PCE Price Index (M/M, Aug) ← Key event of the week',
+    fa:'شاخص هسته‌ای PCE — معیار تورمی فدرال رزرو (آگست) ← مهم‌ترین رویداد هفته',
+    prev:'0.2%', fore:'0.2%', actual:null },
 
-  { d:'2026-09-18', t:'—', c:'JPY', i:'H',
-    en:'BoJ Governor Ueda Press Conference',
-    fa:'کنفرانس مطبوعاتی گاورنر اوئدا — بانک جاپان',
-    prev:'—', fore:'—', actual:null },
+  { d:'2026-09-25', t:'08:30', c:'USD', i:'H',
+    en:'Core PCE Price Index (Y/Y, Aug)',
+    fa:'شاخص هسته‌ای PCE سالانه (آگست)',
+    prev:'2.6%', fore:'2.6%', actual:null },
 
-  { d:'2026-09-18', t:'08:30', c:'CAD', i:'M',
-    en:'Canada Retail Sales (M/M, Jul)',
-    fa:'فروش خرده‌فروشی کانادا — ماهانه (جولای)',
-    prev:'-0.3%', fore:'0.3%', actual:null },
+  { d:'2026-09-25', t:'08:30', c:'USD', i:'M',
+    en:'Personal Income (M/M, Aug)',
+    fa:'درآمد شخصی — ماهانه (آگست)',
+    prev:'0.2%', fore:'0.4%', actual:null },
 
-  { d:'2026-09-18', t:'10:00', c:'USD', i:'M',
+  { d:'2026-09-25', t:'08:30', c:'USD', i:'M',
+    en:'Personal Spending (M/M, Aug)',
+    fa:'مصارف شخصی — ماهانه (آگست)',
+    prev:'0.5%', fore:'0.3%', actual:null },
+
+  { d:'2026-09-25', t:'10:00', c:'USD', i:'M',
     en:'University of Michigan Consumer Sentiment Final (Sep)',
     fa:'احساسات مصرف‌کننده دانشگاه میشیگان — نهایی (سپتامبر)',
-    prev:'51.7', fore:'54.0', actual:null },
+    prev:'54.0', fore:'54.2', actual:null },
 ];
 
 // Dari weekday / month names
