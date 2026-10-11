@@ -297,141 +297,141 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
 
 <script>
 // ══════════════════════════════════════════════════════════════════
-//  REAL DATA — Week Oct 05-09, 2026 (US Eastern Time)
+//  REAL DATA — Week Oct 12-16, 2026 (US Eastern Time)
 //  Sources: Forex Factory / Investing.com / Trading Economics
 //  impact: H=High  M=Medium  L=Low
 //  actual: null = not yet released   string = official released value
 // ══════════════════════════════════════════════════════════════════
 const EVS = [
 
-  // ── دوشنبه ۵ اکتوبر ──────────────────────────────────────
-  { d:'2026-10-05', t:'01:30', c:'AUD', i:'M',
-    en:'Australia Retail Sales (M/M, Aug)',
-    fa:'فروش خرده‌فروشی استرالیا — ماهانه (آگست)',
-    prev:'0.0%', fore:'0.2%', actual:null },
+  // ── دوشنبه ۱۲ اکتوبر ─────────────────────────────────────
+  { d:'2026-10-12', t:'01:30', c:'CNY', i:'H',
+    en:'China CPI (Y/Y, Sep)',
+    fa:'شاخص قیمت مصرف‌کننده چین — سالانه (سپتامبر)',
+    prev:'-0.1%', fore:'0.0%', actual:null },
 
-  { d:'2026-10-05', t:'04:30', c:'GBP', i:'H',
-    en:'UK Final Services PMI (Sep)',
-    fa:'شاخص مدیران خرید خدمات بریتانیا — نهایی (سپتامبر)',
-    prev:'54.8', fore:'54.8', actual:null },
+  { d:'2026-10-12', t:'01:30', c:'CNY', i:'H',
+    en:'China PPI (Y/Y, Sep)',
+    fa:'شاخص قیمت تولیدکننده چین — سالانه (سپتامبر)',
+    prev:'-2.8%', fore:'-2.5%', actual:null },
 
-  { d:'2026-10-05', t:'05:00', c:'EUR', i:'M',
-    en:'Eurozone Final Services PMI (Sep)',
-    fa:'شاخص مدیران خرید خدمات منطقه یورو — نهایی (سپتامبر)',
-    prev:'52.2', fore:'52.2', actual:null },
-
-  { d:'2026-10-05', t:'05:00', c:'EUR', i:'M',
-    en:'Eurozone Retail Sales (M/M, Aug)',
-    fa:'فروش خرده‌فروشی منطقه یورو — ماهانه (آگست)',
-    prev:'—', fore:'0.3%', actual:null },
-
-  { d:'2026-10-05', t:'10:00', c:'USD', i:'H',
-    en:'ISM Services PMI (Sep)',
-    fa:'شاخص مدیران خرید خدمات ISM (سپتامبر)',
-    prev:'51.5', fore:'51.8', actual:null },
-
-  // ── سه‌شنبه ۶ اکتوبر ──────────────────────────────────────
-  { d:'2026-10-06', t:'01:30', c:'AUD', i:'H',
-    en:'RBA Meeting Minutes',
-    fa:'صورت‌جلسه نشست بانک مرکزی استرالیا (RBA)',
+  { d:'2026-10-12', t:'08:30', c:'USD', i:'H',
+    en:'Columbus Day — US Bond Markets Closed (Equity open)',
+    fa:'تعطیل روز کریستوف کلمب — بازار اوراق قرضه آمریکا تعطیل (سهام باز)',
     prev:'—', fore:'—', actual:null },
 
-  { d:'2026-10-06', t:'08:30', c:'CAD', i:'H',
-    en:'Canada Ivey PMI (Sep)',
-    fa:'شاخص مدیران خرید ایوی کانادا (سپتامبر)',
-    prev:'52.0', fore:'—', actual:null },
+  { d:'2026-10-12', t:'05:00', c:'EUR', i:'M',
+    en:'Eurozone Sentix Investor Confidence (Oct)',
+    fa:'شاخص اعتماد سرمایه‌گذار سنتیکس منطقه یورو (اکتوبر)',
+    prev:'-15.4', fore:'-14.0', actual:null },
 
-  { d:'2026-10-06', t:'08:30', c:'USD', i:'H',
-    en:'Trade Balance (Aug)',
-    fa:'تراز تجاری آمریکا (آگست)',
-    prev:'-$78.8B', fore:'-$82.0B', actual:null },
+  // ── سه‌شنبه ۱۳ اکتوبر ────────────────────────────────────
+  { d:'2026-10-13', t:'02:00', c:'EUR', i:'H',
+    en:'Germany ZEW Economic Sentiment (Oct)',
+    fa:'احساسات اقتصادی ZEW آلمان (اکتوبر)',
+    prev:'3.6', fore:'5.0', actual:null },
 
-  { d:'2026-10-06', t:'14:00', c:'USD', i:'M',
-    en:'FOMC Minutes (Sep 17-18 Meeting)',
-    fa:'صورت‌جلسه کمیته بازار آزاد فدرال — نشست ۱۷-۱۸ سپتامبر',
-    prev:'—', fore:'—', actual:null },
+  { d:'2026-10-13', t:'02:00', c:'EUR', i:'M',
+    en:'Eurozone ZEW Economic Sentiment (Oct)',
+    fa:'احساسات اقتصادی ZEW منطقه یورو (اکتوبر)',
+    prev:'9.3', fore:'—', actual:null },
 
-  // ── چهارشنبه ۷ اکتوبر ────────────────────────────────────
-  { d:'2026-10-07', t:'02:00', c:'EUR', i:'H',
-    en:'Germany Factory Orders (M/M, Aug)',
-    fa:'سفارش‌های کارخانه آلمان — ماهانه (آگست)',
-    prev:'-3.8%', fore:'1.5%', actual:null },
+  { d:'2026-10-13', t:'08:30', c:'USD', i:'H',
+    en:'US CPI (Y/Y, Sep) ← Key event today',
+    fa:'شاخص قیمت مصرف‌کننده آمریکا — سالانه (سپتامبر) ← مهم‌ترین رویداد امروز',
+    prev:'2.5%', fore:'2.3%', actual:null },
 
-  { d:'2026-10-07', t:'04:30', c:'GBP', i:'H',
-    en:'UK Construction PMI (Sep)',
-    fa:'شاخص مدیران خرید ساخت و ساز بریتانیا (سپتامبر)',
-    prev:'57.2', fore:'56.0', actual:null },
+  { d:'2026-10-13', t:'08:30', c:'USD', i:'H',
+    en:'US Core CPI (Y/Y, Sep)',
+    fa:'شاخص هسته‌ای قیمت مصرف‌کننده آمریکا — سالانه (سپتامبر)',
+    prev:'3.2%', fore:'3.2%', actual:null },
 
-  { d:'2026-10-07', t:'08:30', c:'USD', i:'M',
-    en:'Initial Jobless Claims (weekly)',
-    fa:'درخواست‌های اولیه بیکاری — هفتگی',
-    prev:'—', fore:'—', actual:null },
+  { d:'2026-10-13', t:'08:30', c:'USD', i:'H',
+    en:'US CPI (M/M, Sep)',
+    fa:'شاخص قیمت مصرف‌کننده آمریکا — ماهانه (سپتامبر)',
+    prev:'0.2%', fore:'0.1%', actual:null },
 
-  { d:'2026-10-07', t:'10:30', c:'USD', i:'M',
+  // ── چهارشنبه ۱۴ اکتوبر ───────────────────────────────────
+  { d:'2026-10-14', t:'02:00', c:'GBP', i:'H',
+    en:'UK CPI (Y/Y, Sep)',
+    fa:'شاخص قیمت مصرف‌کننده بریتانیا — سالانه (سپتامبر)',
+    prev:'2.2%', fore:'1.9%', actual:null },
+
+  { d:'2026-10-14', t:'02:00', c:'GBP', i:'H',
+    en:'UK Core CPI (Y/Y, Sep)',
+    fa:'شاخص هسته‌ای قیمت مصرف‌کننده بریتانیا — سالانه (سپتامبر)',
+    prev:'3.6%', fore:'3.4%', actual:null },
+
+  { d:'2026-10-14', t:'08:30', c:'USD', i:'H',
+    en:'US PPI (Y/Y, Sep)',
+    fa:'شاخص قیمت تولیدکننده آمریکا — سالانه (سپتامبر)',
+    prev:'1.7%', fore:'1.6%', actual:null },
+
+  { d:'2026-10-14', t:'08:30', c:'USD', i:'M',
+    en:'US PPI (M/M, Sep)',
+    fa:'شاخص قیمت تولیدکننده آمریکا — ماهانه (سپتامبر)',
+    prev:'0.0%', fore:'0.1%', actual:null },
+
+  { d:'2026-10-14', t:'10:30', c:'USD', i:'M',
     en:'EIA Crude Oil Inventories (weekly)',
     fa:'ذخایر نفت خام EIA — هفتگی',
     prev:'—', fore:'—', actual:null },
 
-  // ── پنجشنبه ۸ اکتوبر ────────────────────────────────────
-  { d:'2026-10-08', t:'02:00', c:'EUR', i:'H',
-    en:'Germany Industrial Production (M/M, Aug)',
-    fa:'تولیدات صنعتی آلمان — ماهانه (آگست)',
-    prev:'-0.1%', fore:'0.8%', actual:null },
-
-  { d:'2026-10-08', t:'04:30', c:'GBP', i:'H',
-    en:'UK GDP Monthly Estimate (Aug)',
-    fa:'تخمین ماهانه تولید ناخالص داخلی بریتانیا (آگست)',
-    prev:'0.0%', fore:'0.2%', actual:null },
-
-  { d:'2026-10-08', t:'04:30', c:'GBP', i:'M',
-    en:'UK Industrial Production (M/M, Aug)',
-    fa:'تولیدات صنعتی بریتانیا — ماهانه (آگست)',
-    prev:'-0.8%', fore:'0.2%', actual:null },
-
-  { d:'2026-10-08', t:'04:30', c:'GBP', i:'M',
-    en:'UK Trade Balance (Aug)',
-    fa:'تراز تجاری بریتانیا (آگست)',
-    prev:'-£19.7B', fore:'—', actual:null },
-
-  { d:'2026-10-08', t:'08:30', c:'USD', i:'H',
-    en:'Initial Jobless Claims (weekly)',
-    fa:'درخواست‌های اولیه بیکاری — هفتگی',
+  { d:'2026-10-14', t:'14:00', c:'USD', i:'M',
+    en:'Fed Beige Book',
+    fa:'کتاب بیژ فدرال رزرو',
     prev:'—', fore:'—', actual:null },
 
-  { d:'2026-10-08', t:'08:30', c:'CAD', i:'H',
-    en:'Canada Employment Change & Unemployment Rate (Sep)',
-    fa:'تغییر اشتغال و نرخ بیکاری کانادا (سپتامبر)',
-    prev:'+22.1K / 6.3%', fore:'+25.0K / 6.3%', actual:null },
+  // ── پنجشنبه ۱۵ اکتوبر ────────────────────────────────────
+  { d:'2026-10-15', t:'01:30', c:'AUD', i:'H',
+    en:'Australia Employment Change & Unemployment Rate (Sep)',
+    fa:'تغییر اشتغال و نرخ بیکاری استرالیا (سپتامبر)',
+    prev:'+47.5K / 4.2%', fore:'+25.0K / 4.2%', actual:null },
 
-  // ── جمعه ۹ اکتوبر ───────────────────────────────────────
-  { d:'2026-10-09', t:'02:00', c:'EUR', i:'M',
-    en:'Germany Trade Balance (Aug)',
-    fa:'تراز تجاری آلمان (آگست)',
-    prev:'€16.8B', fore:'—', actual:null },
+  { d:'2026-10-15', t:'07:45', c:'EUR', i:'H',
+    en:'ECB Interest Rate Decision ← Key event today',
+    fa:'تصمیم نرخ بهره بانک مرکزی اروپا (ECB) ← مهم‌ترین رویداد امروز',
+    prev:'3.50%', fore:'3.25%', actual:null },
 
-  { d:'2026-10-09', t:'08:30', c:'USD', i:'H',
-    en:'Non-Farm Payrolls (Sep) ← Key event of the week',
-    fa:'اشتغال غیرکشاورزی آمریکا (سپتامبر) ← مهم‌ترین رویداد هفته',
-    prev:''+' 254K', fore:'+145K', actual:null },
+  { d:'2026-10-15', t:'08:30', c:'USD', i:'H',
+    en:'US Retail Sales (M/M, Sep)',
+    fa:'فروش خرده‌فروشی آمریکا — ماهانه (سپتامبر)',
+    prev:'0.1%', fore:'0.3%', actual:null },
 
-  { d:'2026-10-09', t:'08:30', c:'USD', i:'H',
-    en:'Unemployment Rate (Sep)',
-    fa:'نرخ بیکاری آمریکا (سپتامبر)',
-    prev:'4.1%', fore:'4.1%', actual:null },
+  { d:'2026-10-15', t:'08:30', c:'USD', i:'H',
+    en:'Initial Jobless Claims (weekly)',
+    fa:'درخواست‌های اولیه بیکاری آمریکا — هفتگی',
+    prev:'—', fore:'—', actual:null },
 
-  { d:'2026-10-09', t:'08:30', c:'USD', i:'H',
-    en:'Average Hourly Earnings (M/M, Sep)',
-    fa:'میانگین دستمزد ساعتی آمریکا — ماهانه (سپتامبر)',
-    prev:'0.4%', fore:'0.3%', actual:null },
+  { d:'2026-10-15', t:'08:45', c:'EUR', i:'H',
+    en:'ECB Press Conference — President Lagarde',
+    fa:'کنفرانس مطبوعاتی ECB — رئیس لاگارد',
+    prev:'—', fore:'—', actual:null },
 
-  { d:'2026-10-09', t:'08:30', c:'CAD', i:'H',
-    en:'Canada Unemployment Rate (Sep)',
-    fa:'نرخ بیکاری کانادا (سپتامبر)',
-    prev:'6.3%', fore:'6.3%', actual:null },
+  { d:'2026-10-15', t:'09:15', c:'USD', i:'M',
+    en:'US Industrial Production (M/M, Sep)',
+    fa:'تولیدات صنعتی آمریکا — ماهانه (سپتامبر)',
+    prev:'0.8%', fore:'—', actual:null },
 
-  { d:'2026-10-09', t:'10:00', c:'USD', i:'M',
-    en:'Michigan Consumer Sentiment Preliminary (Oct)',
-    fa:'احساسات مصرف‌کننده میشیگان — اولیه (اکتوبر)',
+  // ── جمعه ۱۶ اکتوبر ──────────────────────────────────────
+  { d:'2026-10-16', t:'02:00', c:'EUR', i:'M',
+    en:'Eurozone Trade Balance (Aug)',
+    fa:'تراز تجاری منطقه یورو (آگست)',
+    prev:'€14.8B', fore:'—', actual:null },
+
+  { d:'2026-10-16', t:'08:30', c:'USD', i:'M',
+    en:'US Building Permits (Sep)',
+    fa:'مجوزهای ساخت و ساز آمریکا (سپتامبر)',
+    prev:'1.47M', fore:'1.46M', actual:null },
+
+  { d:'2026-10-16', t:'08:30', c:'USD', i:'M',
+    en:'US Housing Starts (Sep)',
+    fa:'شروع ساخت مسکن آمریکا (سپتامبر)',
+    prev:'1.36M', fore:'1.35M', actual:null },
+
+  { d:'2026-10-16', t:'10:00', c:'USD', i:'M',
+    en:'Michigan Consumer Sentiment Final (Oct)',
+    fa:'احساسات مصرف‌کننده میشیگان — نهایی (اکتوبر)',
     prev:'70.1', fore:'70.9', actual:null },
 
 ];
