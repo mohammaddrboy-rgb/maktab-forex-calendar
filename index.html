@@ -297,142 +297,142 @@ body{background:var(--bg);color:var(--cream);font-family:var(--fb);direction:rtl
 
 <script>
 // ══════════════════════════════════════════════════════════════════
-//  REAL DATA — Week Oct 12-16, 2026 (US Eastern Time)
+//  REAL DATA — Week Oct 19-23, 2026 (US Eastern Time)
 //  Sources: Forex Factory / Investing.com / Trading Economics
 //  impact: H=High  M=Medium  L=Low
 //  actual: null = not yet released   string = official released value
 // ══════════════════════════════════════════════════════════════════
 const EVS = [
 
-  // ── دوشنبه ۱۲ اکتوبر ─────────────────────────────────────
-  { d:'2026-10-12', t:'01:30', c:'CNY', i:'H',
-    en:'China CPI (Y/Y, Sep)',
-    fa:'شاخص قیمت مصرف‌کننده چین — سالانه (سپتامبر)',
-    prev:'-0.1%', fore:'0.0%', actual:null },
+  // ── دوشنبه ۱۹ اکتوبر ─────────────────────────────────────
+  { d:'2026-10-19', t:'01:30', c:'CNY', i:'H',
+    en:'China GDP (Q/Q & Y/Y, Q3)',
+    fa:'تولید ناخالص داخلی چین — سه‌ماهه و سالانه (فصل سوم)',
+    prev:'0.7% / 4.7%', fore:'1.0% / 4.7%', actual:null },
 
-  { d:'2026-10-12', t:'01:30', c:'CNY', i:'H',
-    en:'China PPI (Y/Y, Sep)',
-    fa:'شاخص قیمت تولیدکننده چین — سالانه (سپتامبر)',
-    prev:'-2.8%', fore:'-2.5%', actual:null },
+  { d:'2026-10-19', t:'01:30', c:'CNY', i:'H',
+    en:'China Retail Sales (Y/Y, Sep)',
+    fa:'فروش خرده‌فروشی چین — سالانه (سپتامبر)',
+    prev:'2.1%', fore:'2.5%', actual:null },
 
-  { d:'2026-10-12', t:'08:30', c:'USD', i:'H',
-    en:'Columbus Day — US Bond Markets Closed (Equity open)',
-    fa:'تعطیل روز کریستوف کلمب — بازار اوراق قرضه آمریکا تعطیل (سهام باز)',
-    prev:'—', fore:'—', actual:null },
+  { d:'2026-10-19', t:'01:30', c:'CNY', i:'H',
+    en:'China Industrial Production (Y/Y, Sep)',
+    fa:'تولیدات صنعتی چین — سالانه (سپتامبر)',
+    prev:'4.5%', fore:'4.6%', actual:null },
 
-  { d:'2026-10-12', t:'05:00', c:'EUR', i:'M',
-    en:'Eurozone Sentix Investor Confidence (Oct)',
-    fa:'شاخص اعتماد سرمایه‌گذار سنتیکس منطقه یورو (اکتوبر)',
-    prev:'-15.4', fore:'-14.0', actual:null },
+  { d:'2026-10-19', t:'05:00', c:'EUR', i:'M',
+    en:'Eurozone CPI Final (Y/Y, Sep)',
+    fa:'شاخص قیمت مصرف‌کننده منطقه یورو — نهایی — سالانه (سپتامبر)',
+    prev:'2.2%', fore:'1.8%', actual:null },
 
-  // ── سه‌شنبه ۱۳ اکتوبر ────────────────────────────────────
-  { d:'2026-10-13', t:'02:00', c:'EUR', i:'H',
-    en:'Germany ZEW Economic Sentiment (Oct)',
-    fa:'احساسات اقتصادی ZEW آلمان (اکتوبر)',
-    prev:'3.6', fore:'5.0', actual:null },
+  // ── سه‌شنبه ۲۰ اکتوبر ────────────────────────────────────
+  { d:'2026-10-20', t:'02:00', c:'EUR', i:'M',
+    en:'Germany PPI (Y/Y, Sep)',
+    fa:'شاخص قیمت تولیدکننده آلمان — سالانه (سپتامبر)',
+    prev:'-0.8%', fore:'—', actual:null },
 
-  { d:'2026-10-13', t:'02:00', c:'EUR', i:'M',
-    en:'Eurozone ZEW Economic Sentiment (Oct)',
-    fa:'احساسات اقتصادی ZEW منطقه یورو (اکتوبر)',
-    prev:'9.3', fore:'—', actual:null },
+  { d:'2026-10-20', t:'04:30', c:'GBP', i:'H',
+    en:'UK Labour Market Report — Claimant Count Change & Unemployment Rate (Aug)',
+    fa:'گزارش بازار کار بریتانیا — تغییر درخواست بیمه بیکاری و نرخ بیکاری (آگست)',
+    prev:'+23.7K / 4.1%', fore:'+20.0K / 4.1%', actual:null },
 
-  { d:'2026-10-13', t:'08:30', c:'USD', i:'H',
-    en:'US CPI (Y/Y, Sep) ← Key event today',
-    fa:'شاخص قیمت مصرف‌کننده آمریکا — سالانه (سپتامبر) ← مهم‌ترین رویداد امروز',
-    prev:'2.5%', fore:'2.3%', actual:null },
+  { d:'2026-10-20', t:'04:30', c:'GBP', i:'H',
+    en:'UK Average Earnings Index (3m/Y, Aug)',
+    fa:'شاخص میانگین دستمزد بریتانیا — سه‌ماهه سالانه (آگست)',
+    prev:'5.1%', fore:'4.9%', actual:null },
 
-  { d:'2026-10-13', t:'08:30', c:'USD', i:'H',
-    en:'US Core CPI (Y/Y, Sep)',
-    fa:'شاخص هسته‌ای قیمت مصرف‌کننده آمریکا — سالانه (سپتامبر)',
-    prev:'3.2%', fore:'3.2%', actual:null },
+  { d:'2026-10-20', t:'10:00', c:'USD', i:'M',
+    en:'Existing Home Sales (Sep)',
+    fa:'فروش خانه‌های موجود آمریکا (سپتامبر)',
+    prev:'3.86M', fore:'3.90M', actual:null },
 
-  { d:'2026-10-13', t:'08:30', c:'USD', i:'H',
-    en:'US CPI (M/M, Sep)',
-    fa:'شاخص قیمت مصرف‌کننده آمریکا — ماهانه (سپتامبر)',
-    prev:'0.2%', fore:'0.1%', actual:null },
-
-  // ── چهارشنبه ۱۴ اکتوبر ───────────────────────────────────
-  { d:'2026-10-14', t:'02:00', c:'GBP', i:'H',
+  // ── چهارشنبه ۲۱ اکتوبر ───────────────────────────────────
+  { d:'2026-10-21', t:'02:00', c:'GBP', i:'H',
     en:'UK CPI (Y/Y, Sep)',
     fa:'شاخص قیمت مصرف‌کننده بریتانیا — سالانه (سپتامبر)',
     prev:'2.2%', fore:'1.9%', actual:null },
 
-  { d:'2026-10-14', t:'02:00', c:'GBP', i:'H',
+  { d:'2026-10-21', t:'02:00', c:'GBP', i:'H',
     en:'UK Core CPI (Y/Y, Sep)',
     fa:'شاخص هسته‌ای قیمت مصرف‌کننده بریتانیا — سالانه (سپتامبر)',
     prev:'3.6%', fore:'3.4%', actual:null },
 
-  { d:'2026-10-14', t:'08:30', c:'USD', i:'H',
-    en:'US PPI (Y/Y, Sep)',
-    fa:'شاخص قیمت تولیدکننده آمریکا — سالانه (سپتامبر)',
-    prev:'1.7%', fore:'1.6%', actual:null },
+  { d:'2026-10-21', t:'08:30', c:'CAD', i:'H',
+    en:'Canada CPI (Y/Y, Sep)',
+    fa:'شاخص قیمت مصرف‌کننده کانادا — سالانه (سپتامبر)',
+    prev:'2.0%', fore:'1.9%', actual:null },
 
-  { d:'2026-10-14', t:'08:30', c:'USD', i:'M',
-    en:'US PPI (M/M, Sep)',
-    fa:'شاخص قیمت تولیدکننده آمریکا — ماهانه (سپتامبر)',
-    prev:'0.0%', fore:'0.1%', actual:null },
-
-  { d:'2026-10-14', t:'10:30', c:'USD', i:'M',
+  { d:'2026-10-21', t:'10:30', c:'USD', i:'M',
     en:'EIA Crude Oil Inventories (weekly)',
     fa:'ذخایر نفت خام EIA — هفتگی',
     prev:'—', fore:'—', actual:null },
 
-  { d:'2026-10-14', t:'14:00', c:'USD', i:'M',
-    en:'Fed Beige Book',
-    fa:'کتاب بیژ فدرال رزرو',
-    prev:'—', fore:'—', actual:null },
+  // ── پنجشنبه ۲۲ اکتوبر ────────────────────────────────────
+  { d:'2026-10-22', t:'00:30', c:'JPY', i:'H',
+    en:'Japan National CPI (Y/Y, Sep)',
+    fa:'شاخص قیمت مصرف‌کننده ملی جاپان — سالانه (سپتامبر)',
+    prev:'3.0%', fore:'2.3%', actual:null },
 
-  // ── پنجشنبه ۱۵ اکتوبر ────────────────────────────────────
-  { d:'2026-10-15', t:'01:30', c:'AUD', i:'H',
-    en:'Australia Employment Change & Unemployment Rate (Sep)',
-    fa:'تغییر اشتغال و نرخ بیکاری استرالیا (سپتامبر)',
-    prev:'+47.5K / 4.2%', fore:'+25.0K / 4.2%', actual:null },
+  { d:'2026-10-22', t:'02:00', c:'EUR', i:'M',
+    en:'Germany Manufacturing PMI Flash (Oct)',
+    fa:'شاخص مدیران خرید تولید آلمان — اولیه (اکتوبر)',
+    prev:'40.6', fore:'41.0', actual:null },
 
-  { d:'2026-10-15', t:'07:45', c:'EUR', i:'H',
-    en:'ECB Interest Rate Decision ← Key event today',
-    fa:'تصمیم نرخ بهره بانک مرکزی اروپا (ECB) ← مهم‌ترین رویداد امروز',
-    prev:'3.50%', fore:'3.25%', actual:null },
+  { d:'2026-10-22', t:'02:00', c:'EUR', i:'M',
+    en:'Germany Services PMI Flash (Oct)',
+    fa:'شاخص مدیران خرید خدمات آلمان — اولیه (اکتوبر)',
+    prev:'50.6', fore:'50.8', actual:null },
 
-  { d:'2026-10-15', t:'08:30', c:'USD', i:'H',
-    en:'US Retail Sales (M/M, Sep)',
-    fa:'فروش خرده‌فروشی آمریکا — ماهانه (سپتامبر)',
-    prev:'0.1%', fore:'0.3%', actual:null },
+  { d:'2026-10-22', t:'04:00', c:'EUR', i:'H',
+    en:'Eurozone Manufacturing PMI Flash (Oct)',
+    fa:'شاخص مدیران خرید تولید منطقه یورو — اولیه (اکتوبر)',
+    prev:'45.0', fore:'45.5', actual:null },
 
-  { d:'2026-10-15', t:'08:30', c:'USD', i:'H',
+  { d:'2026-10-22', t:'04:00', c:'EUR', i:'H',
+    en:'Eurozone Services PMI Flash (Oct)',
+    fa:'شاخص مدیران خرید خدمات منطقه یورو — اولیه (اکتوبر)',
+    prev:'51.4', fore:'51.5', actual:null },
+
+  { d:'2026-10-22', t:'04:30', c:'GBP', i:'H',
+    en:'UK Manufacturing PMI Flash (Oct)',
+    fa:'شاخص مدیران خرید تولید بریتانیا — اولیه (اکتوبر)',
+    prev:'51.5', fore:'51.5', actual:null },
+
+  { d:'2026-10-22', t:'04:30', c:'GBP', i:'H',
+    en:'UK Services PMI Flash (Oct)',
+    fa:'شاخص مدیران خرید خدمات بریتانیا — اولیه (اکتوبر)',
+    prev:'52.4', fore:'52.5', actual:null },
+
+  { d:'2026-10-22', t:'08:30', c:'USD', i:'H',
     en:'Initial Jobless Claims (weekly)',
     fa:'درخواست‌های اولیه بیکاری آمریکا — هفتگی',
     prev:'—', fore:'—', actual:null },
 
-  { d:'2026-10-15', t:'08:45', c:'EUR', i:'H',
-    en:'ECB Press Conference — President Lagarde',
-    fa:'کنفرانس مطبوعاتی ECB — رئیس لاگارد',
-    prev:'—', fore:'—', actual:null },
+  { d:'2026-10-22', t:'09:45', c:'USD', i:'H',
+    en:'US Manufacturing PMI Flash (Oct)',
+    fa:'شاخص مدیران خرید تولید آمریکا — اولیه (اکتوبر)',
+    prev:'47.3', fore:'47.5', actual:null },
 
-  { d:'2026-10-15', t:'09:15', c:'USD', i:'M',
-    en:'US Industrial Production (M/M, Sep)',
-    fa:'تولیدات صنعتی آمریکا — ماهانه (سپتامبر)',
-    prev:'0.8%', fore:'—', actual:null },
+  { d:'2026-10-22', t:'09:45', c:'USD', i:'H',
+    en:'US Services PMI Flash (Oct) ← Key event today',
+    fa:'شاخص مدیران خرید خدمات آمریکا — اولیه (اکتوبر) ← مهم‌ترین رویداد امروز',
+    prev:'55.2', fore:'55.0', actual:null },
 
-  // ── جمعه ۱۶ اکتوبر ──────────────────────────────────────
-  { d:'2026-10-16', t:'02:00', c:'EUR', i:'M',
-    en:'Eurozone Trade Balance (Aug)',
-    fa:'تراز تجاری منطقه یورو (آگست)',
-    prev:'€14.8B', fore:'—', actual:null },
+  // ── جمعه ۲۳ اکتوبر ──────────────────────────────────────
+  { d:'2026-10-23', t:'04:30', c:'GBP', i:'M',
+    en:'UK Retail Sales (M/M, Sep)',
+    fa:'فروش خرده‌فروشی بریتانیا — ماهانه (سپتامبر)',
+    prev:'1.0%', fore:'0.3%', actual:null },
 
-  { d:'2026-10-16', t:'08:30', c:'USD', i:'M',
-    en:'US Building Permits (Sep)',
-    fa:'مجوزهای ساخت و ساز آمریکا (سپتامبر)',
-    prev:'1.47M', fore:'1.46M', actual:null },
+  { d:'2026-10-23', t:'08:30', c:'CAD', i:'H',
+    en:'Canada Retail Sales (M/M, Aug)',
+    fa:'فروش خرده‌فروشی کانادا — ماهانه (آگست)',
+    prev:'0.9%', fore:'—', actual:null },
 
-  { d:'2026-10-16', t:'08:30', c:'USD', i:'M',
-    en:'US Housing Starts (Sep)',
-    fa:'شروع ساخت مسکن آمریکا (سپتامبر)',
-    prev:'1.36M', fore:'1.35M', actual:null },
-
-  { d:'2026-10-16', t:'10:00', c:'USD', i:'M',
-    en:'Michigan Consumer Sentiment Final (Oct)',
-    fa:'احساسات مصرف‌کننده میشیگان — نهایی (اکتوبر)',
-    prev:'70.1', fore:'70.9', actual:null },
+  { d:'2026-10-23', t:'10:00', c:'USD', i:'M',
+    en:'New Home Sales (Sep)',
+    fa:'فروش خانه‌های جدید آمریکا (سپتامبر)',
+    prev:'716K', fore:'720K', actual:null },
 
 ];
 
